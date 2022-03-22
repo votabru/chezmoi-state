@@ -17,7 +17,7 @@ echo "Homebrew install - Done"
 
 echo "Ensuring chezmoi is installed and updated"
 
-if ! command -v chezmoi > dev/null; then
+if ! command -v chezmoi > /dev/null; then
   brew install chezmoi
 fi
 echo "chezmoi install - Done"
