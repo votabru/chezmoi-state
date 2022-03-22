@@ -1,16 +1,9 @@
 #!/usr/bin/env bash
 
-################################################################################
-# Make sure we're on a Mac before continuing
-################################################################################
 if [ "$(uname)" != "Darwin" ]; then
-  bootstrap_error "Oops, it looks like you're using a non-Darwin system. This script
-only supports macOS. Exiting..."
+  echo "MacOS only. Bye"
 fi
 
-################################################################################
-# Homebrew
-################################################################################
 echo "Ensuring Homebrew is installed and updated"
 
 if ! command -v brew > /dev/null; then
@@ -21,19 +14,14 @@ fi
 
 brew update
 echo "Homebrew install - Done"
-################################################################################
 
-
-################################################################################
-# chezmoi
-################################################################################
 echo "Ensuring chezmoi is installed and updated"
 
 if ! command -v chezmoi > dev/null; then
   brew install chezmoi
 fi
 echo "chezmoi install - Done"
-################################################################################
 
+echo "chezmoi init and apply, set remote"
 chezmoi init --apply https://github.com/votabru/chezmoi-state.git
 chezmoi git -- remote set-url origin --push git@github.com:/votabru/chezmoi-state.git
