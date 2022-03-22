@@ -7,7 +7,7 @@ fi
 echo "Ensuring Homebrew is installed and updated"
 
 if ! command -v brew > /dev/null; then
-  bootstrap_echo "Installing Homebrew"
+  echo "Installing Homebrew"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
   export PATH="/usr/local/bin:$PATH"
 fi
