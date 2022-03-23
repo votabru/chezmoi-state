@@ -1,0 +1,22 @@
+# Brewfile
+
+cask_args no_quarantine: true
+
+tap "homebrew/cask-versions"
+tap "homebrew/homebrew-cask-drivers"
+
+{{- if eq .chezmoi.os "darwin" }}
+
+brew "awscli"
+brew "chezmoi"                                        
+brew "golang"
+brew "jq"
+brew "pyenv"
+brew "tfenv"
+brew "vim"
+
+cask "google-chrome"
+cask "iterm2"
+cask "visual-studio-code"
+
+{{ end }}
