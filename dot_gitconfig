@@ -1,0 +1,8 @@
+[init]
+	defaultBranch = main
+[user]
+	name = Wouter Roux
+	email = wouter.roux@gmail.com
+
+[url "ssh://git@github.com/"]
+  insteadOf = https://github.com/

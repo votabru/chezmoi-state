@@ -2,6 +2,7 @@
 
 if [ "$(uname)" != "Darwin" ]; then
   echo "MacOS only. Bye"
+  exit 1
 fi
 
 echo "Ensuring Homebrew is installed and updated"
