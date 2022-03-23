@@ -9,8 +9,8 @@ echo "Ensuring Homebrew is installed and updated"
 if ! command -v brew > /dev/null; then
   echo "Installing Homebrew"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-  echo 'eval $(/opt/homebrew/bin/brew shellenv)' >> ~/.zprofile
-  eval $(/opt/homebrew/bin/brew shellenv)
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 brew update
