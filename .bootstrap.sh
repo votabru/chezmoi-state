@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 if [ "$(uname)" != "Darwin" ]; then
   echo "MacOS only. Bye"
@@ -8,8 +8,9 @@ echo "Ensuring Homebrew is installed and updated"
 
 if ! command -v brew > /dev/null; then
   echo "Installing Homebrew"
-  zsh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-  export PATH="/opt/homebrew/bin:$PATH"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  echo 'eval $(/opt/homebrew/bin/brew shellenv)' >> ~/.zprofile
+  eval $(/opt/homebrew/bin/brew shellenv)
 fi
 
 brew update
