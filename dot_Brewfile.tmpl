@@ -7,6 +7,13 @@ tap "homebrew/homebrew-cask-drivers"
 
 {{- if eq .chezmoi.os "darwin" }}
 
+# seems to be required to install python 3.7.10 via pyenv
+brew "openssl" 
+brew "readline" 
+brew "sqlite3" 
+brew "xz" 
+brew "zlib"
+
 brew "awscli"
 brew "chezmoi"                                        
 brew "golang"
