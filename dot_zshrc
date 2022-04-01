@@ -1,0 +1,72 @@
+# General UNIX
+alias cp='cp -iv'
+alias df='df -h'
+alias du='du -h'
+alias mv='mv -iv'
+alias src='. ~/.zshrc'
+
+# Moving around
+alias ..='cd ..'
+alias ...='cd ../../'
+
+# Listing files and directories
+alias l='ls -lFh'     #size,show type,human readable
+alias la='ls -lAFh'   #long list,show almost all,show type,human readable
+alias ld='ls -ld' # Useful for showing permissions of a single directory
+alias ldot='ls -ld .*'
+alias ll='ls -l'      #long list
+alias lr='ls -tRFh'   #sorted by date,recursive,show type,human readable
+
+# Finding stuff!
+alias fd='find . -type d -name'
+alias ff='find . -type f -name'
+
+# Vim
+alias vi='vim'
+alias vv='vim --version | less'
+
+# Git
+alias ga='git add'
+alias gaa='git add --all'
+alias gap='git add --patch'
+alias gb='git branch'
+alias gba='git branch --all'
+alias gbr='git branch --remote'
+alias gbrm='git branch --merged master | grep -v "^\*\|  master" | xargs -n 1 git branch -d'
+alias gca='git commit --amend'
+alias gci='git commit -v'
+alias gcl='git clone'
+alias gco='git checkout'
+alias gcom='git checkout master'
+alias gdf='git diff --word-diff --color-words'
+alias gds='git diff --word-diff --cached --color-words'
+alias gf='git fetch'
+alias gl='git log --date=format:"%b %d, %Y" --pretty=format:"%C(yellow bold)%h%Creset%C(white)%d%Creset %s%n %C(blue)%aN (%cd)%n"'
+alias glg='git log --graph --stat --pretty=format:"%C(yellow bold)%h%Creset%C(white)%d%Creset %s%n %C(blue)%aN (%cd)%n"'
+alias gpl='git pull'
+alias gps='git push'
+alias gpsf='git push --force-with-lease'
+alias gpum='git push -u origin master'
+alias grv='git remote -v'
+alias gs='git status'
+alias gtl='git tag --list | sort -r'
+
+# Mac App Store (https://github.com/argon/mas)
+alias masi='mas install'
+alias masl='mas list'
+alias maso='mas outdated'
+alias mass='mas search'
+alias masu='mas upgrade'
+
+# Homebrew
+alias bc='brew cleanup'
+alias bd='brew doctor'
+alias bg='brew upgrade --all'
+alias bo='brew outdated'
+alias bu='brew update'
+
+# Check for macOS updates
+alias upc='softwareupdate -l'
+
+# Download and install macOS updates
+alias upd='softwareupdate -i -a'
