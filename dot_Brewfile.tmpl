@@ -4,6 +4,7 @@ cask_args no_quarantine: true
 
 tap "homebrew/cask-versions"
 tap "homebrew/homebrew-cask-drivers"
+tap "homebrew/cask-fonts"
 
 {{- if eq .chezmoi.os "darwin" }}
 
@@ -14,6 +15,7 @@ brew "sqlite3"
 brew "xz" 
 brew "zlib"
 
+brew "git"
 brew "awscli"
 brew "chezmoi"                                        
 brew "golang"
@@ -22,6 +24,8 @@ brew "pyenv"
 brew "tfenv"
 brew "vim"
 brew "fish"
+brew "starship"
+brew "imagemagick"
 
 cask "google-chrome"
 cask "iterm2"
