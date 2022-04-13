@@ -72,3 +72,10 @@ alias upc='softwareupdate -l'
 
 # Download and install macOS updates
 alias upd='softwareupdate -i -a'
+
+# history
+unsetopt SHARE_HISTORY
+export HISTFILE="$HOME/.zsh_history"
+export HISTSIZE=100000
+export HISTIGNORE="ignorespace"
+export SAVEHIST=100000 
