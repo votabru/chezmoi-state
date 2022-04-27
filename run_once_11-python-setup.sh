@@ -16,6 +16,8 @@ done
 
 pyenv global "$default_python_version"
 
+python3 -m ensurepip
+
 if ! command -v pip >/dev/null 2>&1; then
   if [[ -d "${HOME}/.pyenv/shims" ]]; then
     export PATH="${HOME}/.pyenv/shims:${PATH}"
