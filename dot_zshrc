@@ -79,3 +79,7 @@ export HISTFILE="$HOME/.zsh_history"
 export HISTSIZE=100000
 export HISTIGNORE="ignorespace"
 export SAVEHIST=100000 
+
+#python
+alias pip='pip3'
+alias python='python3'
