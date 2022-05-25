@@ -83,3 +83,6 @@ export SAVEHIST=100000
 #python
 alias pip='pip3'
 alias python='python3'
+
+#node
+export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
