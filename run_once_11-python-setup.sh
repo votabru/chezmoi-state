@@ -22,5 +22,6 @@ if ! command -v pip >/dev/null 2>&1; then
   fi
 fi
 
+python -m pip install --upgrade pip
 pip3 install "${python_packages[@]}"
 pyenv rehash || true
